@@ -1,0 +1,25 @@
+/* CSS Document */
+body {
+  background-color: #0d94d4;
+  height: 100%;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+flex > div {
+  flex: 1 1 auto;
+  margin: 2px;
+  padding: 2px;
+}
+label {
+  color: white;
+  vertical-align: middle;
+}
+.submit {
+  display: flexbox;
+  flex-direction: row;
+  padding-top: 10px;
+}
