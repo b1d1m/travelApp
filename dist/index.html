@@ -51,31 +51,57 @@
           <div class="container mt-5 mb-5" style="width: 400px">
             <form>
               <div class="flex">
-                <label for="from">From:</label>
-                <input
-                  type="text"
-                  for="from"
-                  name="from"
-                  id="from"
-                  class="form-control"
-                />
-                <label for="from">To:</label>
+                <label for="nextFlight">Your next journey goes to: </label>
                 <input
                   type="text"
                   for="to"
                   name="to"
                   id="to"
                   class="form-control"
+                  placeholder="To"
+                  required
                 />
                 <label>Departure:</label>
-                <input type="text" id="picker1" class="form-control" />
+                <input
+                  type="date"
+                  id="start-date"
+                  class="form-control"
+                  required
+                />
                 <label>Arrival:</label>
-                <input type="text" id="picker2" class="form-control" />
+                <input
+                  type="date"
+                  id="end-date"
+                  class="form-control"
+                  required
+                />
+                <div class="submit">
+                  <input
+                    type="submit"
+                    name="save"
+                    id="travel-summary"
+                    value="Save Trip"
+                    class="btn btn-primary"
+                  />
+                  <input
+                    type="submit"
+                    name="remove"
+                    id="remove-trip"
+                    value="Remove Trip"
+                    class="btn btn-primary"
+                  />
+                </div>
               </div>
             </form>
           </div>
         </div>
       </div>
+      <section class="visible" id="trip_Info">
+        <div class="tripInfo" id="tripFrom">You are travelling to:</div>
+        <div class="tripInfo" id="tripDate">Your trip starts on:</div>
+        <div class="tripInfo" id="tripWeather">The temprature will be:</div>
+        <div class="tripInfo" id="remainDays">Your flight will take of in:</div>
+      </section>
       <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3">
@@ -87,8 +113,5 @@
         <!-- Copyright -->
       </footer>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script type="text/javascript" src="main.js"></script></body>
 </html>

@@ -59,11 +59,22 @@
                   id="to"
                   class="form-control"
                   placeholder="To"
+                  required
                 />
                 <label>Departure:</label>
-                <input type="date" id="start-date" class="form-control" />
+                <input
+                  type="date"
+                  id="start-date"
+                  class="form-control"
+                  required
+                />
                 <label>Arrival:</label>
-                <input type="date" id="end-date" class="form-control" />
+                <input
+                  type="date"
+                  id="end-date"
+                  class="form-control"
+                  required
+                />
                 <div class="submit">
                   <input
                     type="submit"
@@ -85,6 +96,12 @@
           </div>
         </div>
       </div>
+      <section class="visible" id="trip_Info">
+        <div class="tripInfo" id="tripFrom">You are travelling to:</div>
+        <div class="tripInfo" id="tripDate">Your trip starts on:</div>
+        <div class="tripInfo" id="tripWeather">The temprature will be:</div>
+        <div class="tripInfo" id="remainDays">Your flight will take of in:</div>
+      </section>
       <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3">
