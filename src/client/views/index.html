@@ -49,7 +49,7 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="container mt-5 mb-5" style="width: 400px">
-            <form>
+            <form id="trip_form">
               <div class="flex">
                 <label for="nextFlight">Your next journey goes to: </label>
                 <input
@@ -86,7 +86,7 @@
                   <input
                     type="submit"
                     name="remove"
-                    id="remove-trip"
+                    id="remove_trip"
                     value="Remove Trip"
                     class="btn btn-primary"
                   />
@@ -96,22 +96,82 @@
           </div>
         </div>
       </div>
-      <section class="visible" id="trip_Info">
-        <div class="tripInfo" id="tripFrom">You are travelling to:</div>
-        <div class="tripInfo" id="tripDate">Your trip starts on:</div>
-        <div class="tripInfo" id="tripWeather">The temprature will be:</div>
-        <div class="tripInfo" id="remainDays">Your flight will take of in:</div>
-      </section>
-      <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3">
-          © 2020 Copyright:
-          <a class="text-dark" href="http://github.com/b1d1m"
-            >Mohammad Alduwairij</a
-          >
+      <section class="invisible" id="trip_Info">
+        <div class="text-center">
+          <img
+            src=""
+            class="rounded"
+            height="150px"
+            width="300px"
+            alt="Destination image"
+            id="des_img"
+          />
         </div>
-        <!-- Copyright -->
-      </footer>
+        <div class="tripInfo">
+          You are travelling to:
+          <span
+            id="tripFrom"
+            style="font-weight: bold; text-decoration: underline"
+          ></span>
+        </div>
+        <div class="tripInfo">
+          Country:
+          <span
+            id="country"
+            style="font-weight: bold; text-decoration: underline"
+          ></span>
+        </div>
+        <div class="tripInfo">
+          Your trip starts on:
+          <span
+            id="tripDate"
+            style="font-weight: bold; text-decoration: underline"
+          ></span>
+        </div>
+        <div class="tripInfo">
+          The temprature will be:
+          <span
+            id="tripWeather"
+            style="font-weight: bold; text-decoration: underline"
+          ></span>
+          &#8451;
+        </div>
+        <div class="tripInfo">
+          Your flight will take of in:
+          <span
+            id="remainDays"
+            style="font-weight: bold; text-decoration: underline"
+          ></span>
+          days
+        </div>
+        <div class="tripInfo">
+          You will stay for:
+          <span
+            id="stayDays"
+            style="font-weight: bold; text-decoration: underline"
+          ></span>
+          days
+        </div>
+      </section>
     </div>
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3">
+        © 2020 Copyright:
+        <a class="text-dark" href="http://github.com/b1d1m"
+          >Mohammad Alduwairij</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
   </body>
 </html>

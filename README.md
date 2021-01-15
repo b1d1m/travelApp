@@ -10,6 +10,8 @@ To get the latitude and longitude of a speccific city from Geonames and use it i
 
 I used bootstrap to style the site.
 
+Add end date and display length of trip is my stand out.
+
 I hope you are intrestred to use the app :)
 
 You could run the application as follows:
